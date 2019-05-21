@@ -3,9 +3,9 @@ package utility;
 import java.util.Stack;
 
 public class Apuntador {
-    Nodo puntero;
-    Nodo raiz;
-    String ruta;
+    private Nodo puntero;
+    private Nodo raiz;
+    private String ruta;
 
     public Apuntador(Nodo raiz) {
         this.puntero = raiz;
@@ -33,6 +33,10 @@ public class Apuntador {
                 aux = ((Directorio) aux).getPadre();
             }
         } while (true);
+    }
+
+    public void goToRaiz() {
+        this.puntero = this.raiz;
     }
 
     public Nodo getPuntero() {

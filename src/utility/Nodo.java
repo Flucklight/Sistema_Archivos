@@ -13,6 +13,12 @@ public class Nodo {
         this.padre = null;
     }
 
+    public Nodo(Nodo origen) {
+        this.nombre = origen.getNombre();
+        this.hijos = origen.getHijos();
+        this.padre = origen.getPadre();
+    }
+
     public Nodo getPadre() {
         return padre;
     }
