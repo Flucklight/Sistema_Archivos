@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Nodo {
     private String nombre;
     private ArrayList<Nodo> hijos;
+    int n;
 
     public Nodo(String nombre){
         this.nombre = nombre;
@@ -38,5 +39,9 @@ public class Nodo {
 
         for (Nodo hijo : nodo.getHijos())
             printAux(hijo, espaciado + 1);
+    }
+
+    public String getNombre() {
+        return nombre;
     }
 }
