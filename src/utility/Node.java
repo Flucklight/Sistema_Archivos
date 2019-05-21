@@ -50,7 +50,7 @@ public class Node {
 
     public static void printAux(Node node, int spacing){
         for (int i = 0; i < spacing; ++i)
-            System.out.print("      ");
+            System.out.print("    ");
 
         System.out.println(node.name);
 
