@@ -1,4 +1,4 @@
 package utility;
 
-public class Raiz {
+public class Tree {
 }
