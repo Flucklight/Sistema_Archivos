@@ -12,8 +12,7 @@ public class Nodo {
     }
 
     public void addHijo(String nombre){
-        Nodo hijo = new Nodo(nombre);
-        hijos.add(hijo);
+        hijos.add(new Nodo(nombre));
     }
 
     public ArrayList<Nodo> getHijos(){
@@ -27,11 +26,11 @@ public class Nodo {
         return null;
     }
 
-    public void printRaiz(Nodo raiz){
+    public static void print(Nodo raiz){
         printAux(raiz, 0);
     }
 
-    public void printAux(Nodo nodo, int espaciado){
+    public static void printAux(Nodo nodo, int espaciado){
         for (int i = 0; i < espaciado; ++i)
             System.out.print("      ");
 
