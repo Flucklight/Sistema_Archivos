@@ -1,28 +1,23 @@
 package utility;
 
 public class Directorio extends Nodo {
-    private Nodo padre;
 
     public Directorio(Nodo padre, String nombre) {
         super(nombre);
-        this.padre = padre;
+        this.setPadre(padre);
     }
 
-    public void agregarNodo(String nombre) {
-        this.getHijos().add(new Nodo(nombre));
+    public void agregarDirectorio(String nombre) {
+        this.getHijos().add(new Directorio(this, nombre));
+    }
+
+    public void agregarArchivo(String nombre) {
+        this.getHijos().add(new Archivo(this, nombre));
     }
 
     public void mostrarHijos() {
         for (Nodo n : this.getHijos()) {
             System.out.println(n.getNombre());
         }
-    }
-
-    public Nodo getPadre() {
-        return padre;
-    }
-
-    public void setPadre(Nodo padre) {
-        this.padre = padre;
     }
 }

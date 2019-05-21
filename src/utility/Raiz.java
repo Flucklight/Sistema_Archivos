@@ -16,4 +16,9 @@ public class Raiz extends Nodo {
         }
     }
 
+    @Override
+    public void setPadre(Nodo padre) {
+        super.setPadre(null);
+    }
+
 }

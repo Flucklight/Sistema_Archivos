@@ -2,11 +2,10 @@ package utility;
 
 public class Archivo extends Nodo {
     private String extension;
-    private Nodo padre;
 
     public Archivo(Nodo padre, String nombre) {
         super(nombre);
-        this.padre = padre;
+        this.setPadre(padre);
         if (nombre.contains(".")) {
             String[] s = nombre.split(".");
             this.extension = s[1];
@@ -19,14 +18,6 @@ public class Archivo extends Nodo {
 
     public void setExtension(String extension) {
         this.extension = extension;
-    }
-
-    public Nodo getPadre() {
-        return padre;
-    }
-
-    public void setPadre(Nodo padre) {
-        this.padre = padre;
     }
 
     @Override
