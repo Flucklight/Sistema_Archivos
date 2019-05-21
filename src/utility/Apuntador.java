@@ -7,16 +7,19 @@ public class Apuntador {
     public Apuntador(Nodo puntero) {
         this.puntero = puntero;
         this.ruta = "";
-        this.ruta += this.puntero.getNombre() + "/";
+        this.ruta += this.puntero.getNombre()+"/";
     }
 
     public void mover(Nodo posicion){
         this.puntero = posicion;
         if (this.ruta.contains(this.puntero.getNombre())){
-            //leo paro aqui con los subString mas o menos me imagino que
-            //sabes que quiero hacer.
+            int index = ruta.length()-1;
+            while(ruta.charAt(index) != '/') {
+			    index--;
+		    }
+		    ruta = ruta.substring(0, index);
         } else {
-            this.ruta += puntero.getNombre() + "/";
+            this.ruta += puntero.getNombre()+"/";
         }
     }
 
