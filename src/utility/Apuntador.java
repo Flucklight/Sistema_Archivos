@@ -7,7 +7,7 @@ public class Apuntador {
     public Apuntador(Nodo puntero) {
         this.puntero = puntero;
         this.ruta = "";
-        this.ruta += this.puntero.getNombre();
+        this.ruta += this.puntero.getNombre() + "/";
     }
 
     public void mover(Nodo posicion){
@@ -16,7 +16,7 @@ public class Apuntador {
             //leo paro aqui con los subString mas o menos me imagino que
             //sabes que quiero hacer.
         } else {
-            this.ruta += puntero.getNombre();
+            this.ruta += puntero.getNombre() + "/";
         }
     }
 
