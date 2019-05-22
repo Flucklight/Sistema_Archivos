@@ -33,7 +33,7 @@ public class Arbol {
     public boolean accederDirectorioRelativo(String nombre) {
         for (Nodo n : this.apuntador.getPuntero().getHijos()) {
             if (n.getNombre().equals(nombre)) {
-                this.apuntador.mover(n);
+                this.apuntador.setPuntero(n);
                 return true;
             }
         }
@@ -42,11 +42,11 @@ public class Arbol {
 
     public boolean accederDirectorioAbsoluto(String ruta) {
         Nodo aux = this.apuntador.getPuntero();
-        this.apuntador.goToRaiz();
+        this.goToRaiz();
         String[] dir = ruta.split("/");
         for (int i = 1; i < dir.length; i++) {
             if (!this.accederDirectorioRelativo(dir[i])) {
-                this.apuntador.mover(aux);
+                this.apuntador.setPuntero(aux);
                 return false;
             }
         }
@@ -54,11 +54,11 @@ public class Arbol {
     }
 
     public void retrocederDirectorio() {
-        this.apuntador.mover(this.apuntador.getPuntero().getPadre());
+        this.apuntador.setPuntero(this.apuntador.getPuntero().getPadre());
     }
 
     public void goToRaiz() {
-        this.apuntador.goToRaiz();
+        this.apuntador.setPuntero(this.raiz);
     }
 
     public void mostrarContenido() {
@@ -75,7 +75,7 @@ public class Arbol {
         Nodo aux = this.apuntador.getPuntero();
         if (this.accederDirectorioAbsoluto(ruta)) {
             ((Directorio) this.apuntador.getPuntero()).agregarArchivo(nombreArchivo);
-            this.apuntador.mover(aux);
+            this.apuntador.setPuntero(aux);
             return true;
         } else {
             return false;
@@ -92,7 +92,7 @@ public class Arbol {
         Nodo aux = this.apuntador.getPuntero();
         if (this.accederDirectorioAbsoluto(ruta)) {
             ((Directorio) this.apuntador.getPuntero()).agregarDirectorio(nombreDirectorio);
-            this.apuntador.mover(aux);
+            this.apuntador.setPuntero(aux);
             return true;
         } else {
             return false;

@@ -9,7 +9,7 @@ public class Nodo {
 
     public Nodo(String nombre) {
         this.nombre = nombre;
-        this.hijos = new ArrayList<>();
+        this.hijos = null;
         this.padre = null;
     }
 
@@ -25,6 +25,10 @@ public class Nodo {
 
     public void setPadre(Nodo padre) {
         this.padre = padre;
+    }
+
+    public void setHijos(ArrayList<Nodo> hijos) {
+        this.hijos = hijos;
     }
 
     public ArrayList<Nodo> getHijos() {
