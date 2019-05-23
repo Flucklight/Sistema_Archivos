@@ -9,8 +9,30 @@ public class Raiz extends Nodo {
         this.setHijos(new ArrayList<Nodo>());
     }
 
-    public void agregarNodo(String nombre) {
-        this.getHijos().add(new Nodo(nombre));
+    public void agregarDirectorio(String nombre) {
+        this.getHijos().add(new Directorio(this, nombre));
     }
 
+    public void agregarArchivo(String nombre) {
+        this.getHijos().add(new Archivo(this, nombre));
+    }
+
+    public void mostrarHijos() {
+        for (Nodo n : this.getHijos()) {
+            System.out.println(n.getNombre());
+        }
+    }
+
+    public void mostrarArbol() {
+        mostrarArbolProceso(this.getHijos());
+    }
+
+    private void mostrarArbolProceso(ArrayList<Nodo> nodos) {
+        if (nodos != null && !nodos.isEmpty()) {
+            for (Nodo n : nodos) {
+                System.out.println("\t" + n.getNombre());
+                mostrarArbolProceso(n.getHijos());
+            }
+        }
+    }
 }

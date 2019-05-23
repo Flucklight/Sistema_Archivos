@@ -42,4 +42,5 @@ public class Nodo {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
 }
