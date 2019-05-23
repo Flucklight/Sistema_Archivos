@@ -1,5 +1,8 @@
+import utility.Arbol;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Si funciono ");
+        Arbol arbol = new Arbol();
+        arbol.cargarSimulacion();
     }
 }
