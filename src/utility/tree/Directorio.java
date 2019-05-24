@@ -1,4 +1,4 @@
-package utility;
+package utility.tree;
 
 import java.util.ArrayList;
 
@@ -10,15 +10,15 @@ public class Directorio extends Nodo {
         this.setHijos(new ArrayList<Nodo>());
     }
 
-    public void agregarDirectorio(String nombre) {
+    protected void agregarDirectorio(String nombre) {
         this.getHijos().add(new Directorio(this, nombre));
     }
 
-    public void agregarArchivo(String nombre) {
+    protected void agregarArchivo(String nombre) {
         this.getHijos().add(new Archivo(this, nombre));
     }
 
-    public void mostrarHijos() {
+    protected void mostrarHijos() {
         for (Nodo n : this.getHijos()) {
             System.out.println(n.getNombre());
         }

@@ -1,4 +1,4 @@
-package utility;
+package utility.tree;
 
 import java.util.Stack;
 
@@ -29,11 +29,13 @@ public class Apuntador {
         enrutar();
     }
 
-    public Nodo getPuntero() {
+    protected Nodo getPuntero() {
         return puntero;
     }
 
-    public String getRuta() {
+    protected String getRuta() {
         return ruta;
     }
+
+
 }

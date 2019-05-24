@@ -1,4 +1,4 @@
-package utility;
+package utility.tree;
 
 import java.util.ArrayList;
 
@@ -19,27 +19,27 @@ public class Nodo {
         this.padre = origen.getPadre();
     }
 
-    public Nodo getPadre() {
+    protected Nodo getPadre() {
         return padre;
     }
 
-    public void setPadre(Nodo padre) {
+    protected void setPadre(Nodo padre) {
         this.padre = padre;
     }
 
-    public void setHijos(ArrayList<Nodo> hijos) {
+    protected void setHijos(ArrayList<Nodo> hijos) {
         this.hijos = hijos;
     }
 
-    public ArrayList<Nodo> getHijos() {
+    protected ArrayList<Nodo> getHijos() {
         return hijos;
     }
 
-    public String getNombre() {
+    protected String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
+    protected void setNombre(String nombre) {
         this.nombre = nombre;
     }
 

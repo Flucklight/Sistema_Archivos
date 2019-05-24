@@ -1,4 +1,4 @@
-package utility;
+package utility.tree;
 
 public class Archivo extends Nodo {
 
@@ -8,7 +8,7 @@ public class Archivo extends Nodo {
     }
 
     @Override
-    public void setNombre(String nombre) {
+    protected void setNombre(String nombre) {
         super.setNombre(nombre);
     }
 }

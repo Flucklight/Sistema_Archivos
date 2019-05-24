@@ -1,4 +1,4 @@
-package utility;
+package utility.tree;
 
 import javax.swing.*;
 import java.io.*;
@@ -16,10 +16,11 @@ public class Arbol {
         this.cargar();
     }
 
-    private void simulacion() {
+    public void simulacion() {
         String s = "";
         boolean ciclo = true;
         while (ciclo) {
+            System.out.println("\n");
             raiz.mostrarArbol();
             System.out.println("---------------------------------------------------------------------------");
             System.out.println("\n" + this.apuntador.getRuta() + "\n");

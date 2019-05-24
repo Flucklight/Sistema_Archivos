@@ -1,4 +1,4 @@
-import utility.Arbol;
+import utility.tree.Arbol;
 
 public class Main {
     public static void main(String[] args) {
